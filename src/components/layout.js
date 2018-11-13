@@ -7,10 +7,10 @@ import './layout.css'
 const Layout = props => (
   <div>
     <Helmet
-      title="The Gray Web Blog"
+      title="Jacob Hixon — Web Developer"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Web' },
+        { name: 'keywords', content: 'web, developer' },
       ]}
     />
     <Header />
