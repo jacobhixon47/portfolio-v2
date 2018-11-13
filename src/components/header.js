@@ -1,11 +1,11 @@
-import React from 'react'
-import { Link } from 'gatsby'
-
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <div
     style={{
-      background: 'rebeccapurple',
+      background: 'black',
       marginBottom: '1.45rem',
+      marginTop:'0px',
+      display:'block',
+      boxShadow:'0px 0px 7px black',
     }}
   >
     <div
@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => (
         padding: '1.45rem 1.0875rem',
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1 style={{ margin: 0, textAlign:'center' }}>
         <Link
           to="/"
           style={{
@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: 'none',
           }}
         >
-          {siteTitle}
+          The Gray Web Blog
         </Link>
       </h1>
     </div>
