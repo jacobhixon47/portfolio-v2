@@ -4,11 +4,15 @@ import { Link } from 'gatsby'
 const Header = () => (
   <div
     style={{
-      background: 'black',
+      backgroundImage: 'linear-gradient(-60deg, blue 5%, purple 80%)',
       marginBottom: '1.45rem',
       marginTop:'0px',
-      display:'block',
+      display:'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
       boxShadow:'0px 0px 7px black',
+      maxHeight: '100vh',
+      minHeight: '100vh'
     }}
   >
     <div
@@ -16,19 +20,14 @@ const Header = () => (
         margin: '0 auto',
         maxWidth: 960,
         padding: '1.45rem 1.0875rem',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center'
       }}
     >
-      <h1 style={{ margin: 0, textAlign:'center' }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          The Gray Web Blog
-        </Link>
-      </h1>
+      <h1 style={{ margin: 0, textAlign:'center', color: 'white' }}>Jacob Hixon</h1>
+      <p style={{textAlign: 'center', color: '#dddddd'}}><i>Web Developer</i></p>
     </div>
   </div>
 )
