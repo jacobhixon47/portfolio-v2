@@ -1,4 +1,10 @@
-const TemplateWrapper = ({ children }) => (
+import React from 'react'
+// import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import Header from './Header'
+import './layout.css'
+
+const Layout = props => (
   <div>
     <Helmet
       title="The Gray Web Blog"
@@ -16,11 +22,11 @@ const TemplateWrapper = ({ children }) => (
         paddingTop: 0,
       }}
     >
-      {children()}
+    {props.children}
     </div>
   </div>
 )
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
-export default TemplateWrapper
+// Layout.propTypes = {
+//   children: PropTypes.func,
+// }
+export default Layout
