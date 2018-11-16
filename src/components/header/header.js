@@ -1,11 +1,10 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
 
 const Header = () => (
   <div
     style={{
       backgroundImage: 'linear-gradient(-60deg, blue 5%, purple 80%)',
-      marginBottom: '1.45rem',
+      marginBottom: '0',
       marginTop:'0px',
       display:'flex',
       alignItems: 'center',
