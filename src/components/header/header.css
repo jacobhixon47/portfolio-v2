@@ -1,0 +1,30 @@
+#main-header {
+  background: linear-gradient(-60deg, blue 5%, purple 80%);
+  margin-bottom: 0;
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 10px;
+  transition:  .5s;
+  /* min-height: 100vh; */
+}
+
+#main-header.smaller {
+  /* background: purple; */
+  top: 0;
+  position: fixed;
+  height: 10vh;
+  width: 100vw;
+  justify-content: flex-end;
+}
+
+.web-title {
+  transition: all .5s;
+  margin: 0px !important;
+  padding-top: 0px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}

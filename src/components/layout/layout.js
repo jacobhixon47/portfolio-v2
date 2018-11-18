@@ -20,6 +20,22 @@ class Layout extends Component {
     this.toggleMenu = this.toggleMenu.bind(this);
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.resizeHeaderOnScroll);
+  }
+
+  resizeHeaderOnScroll() {
+    const distanceY = window.pageYOffset || document.scrollTop;
+    const shrinkOn = 20;
+    const header = document.getElementById('main-header');
+
+    if (distanceY > shrinkOn) {
+      header.classList.add('smaller');
+    } else {
+      header.classList.remove('smaller');
+    }
+  }
+
   handleMouseDown(e) {
     this.toggleMenu();
 
@@ -34,7 +50,7 @@ class Layout extends Component {
 
   render() {
     return (
-      <div style={{padding: '0', margin: '0', maxHeight: '100vh'}}>
+      <div style={{padding: '0', margin: '0', zIndex: '1'}}>
         <Helmet
         title="Jacob Hixon — Web Developer"
         meta={[
@@ -42,20 +58,10 @@ class Layout extends Component {
           { name: 'keywords', content: 'web, developer' },
         ]}
         />
-        <Button handleMouseDown={this.handleMouseDown}>
-          <MdMenu />
-        </Button>
-        <Header />
-        <div style={{
-          margin: '0',
-          maxHeight: '100vh',
-          maxWidth: '100vw',
-          padding: '0px',
-        }}>
-          <Nav handleMouseDown={this.handleMouseDown}
-                navVisible={this.state.navVisible} />
+        <Header handleMouseDown={this.handleMouseDown}/>
+          <Nav handleMouseDown={this.handleMouseDown} navVisible={this.state.navVisible} />
+          <div style={{minHeight: '10vh', padding: '10px', marginBottom: '10vh'}}/ >
           {this.props.children}
-        </div>
       </div>
     );
   }
