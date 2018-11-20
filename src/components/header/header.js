@@ -4,11 +4,13 @@ import { MdMenu } from 'react-icons/md';
 import './header.css';
 
 const Header = props => (
-  <div id='main-header'>
-  <Button handleMouseDown={props.handleMouseDown}>
-    <MdMenu />
-  </Button>
-    <p className='web-title'>Jacob Hixon</p>
+  <div id='main-header' className='fixed'>
+    <Button handleMouseDown={props.handleMouseDown} style={{zIndex: '999'}}>
+      <MdMenu />
+    </Button>
+    <div id='main-title'>
+      {props.children}
+    </div>
   </div>
 )
 

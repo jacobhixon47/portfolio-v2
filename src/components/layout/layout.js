@@ -13,26 +13,36 @@ class Layout extends Component {
     super(props, context);
 
     this.state = {
-      navVisible: false
+      navVisible: false,
+      headerAnimated: false,
+      prevScrollTop: 0
     };
 
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.resizeHeaderOnScroll);
+    window.addEventListener('scroll', this.handleScroll);
   }
 
-  resizeHeaderOnScroll() {
-    const distanceY = window.pageYOffset || document.scrollTop;
-    const shrinkOn = 20;
-    const header = document.getElementById('main-header');
+  handleScroll() {
+    let header = document.getElementById('main-header');
+    let title = document.getElementById('main-title');
+    let prevScrollTop = this.state.prevScrollTop;
+    let scrollTop = window.pageYOffset || document.scrollTop;
 
-    if (distanceY > shrinkOn) {
-      header.classList.add('smaller');
-    } else {
-      header.classList.remove('smaller');
+    if (prevScrollTop < scrollTop && scrollTop < window.innerHeight) {
+      title.classList.add('title-slide-right');
+      this.setState({ headerAnimated: true, prevScrollTop: scrollTop });
+    // } else if (prevScrollTop < scrollTop && scrollTop >= window.innerHeight * 1 && this.state.headerAnimated) {
+    //   // header.classList.remove('fixed');
+  } else if (prevScrollTop > scrollTop && scrollTop < window.innerHeight) {
+      // header.classList.add('fixed');
+      this.setState({ headerAnimated: true, prevScrollTop: scrollTop });
+      title.classList.remove('title-slide-right');
     }
   }
 
@@ -45,12 +55,12 @@ class Layout extends Component {
   }
 
   toggleMenu() {
-    this.setState({navVisible: !this.state.navVisible });
+    this.setState({ navVisible: !this.state.navVisible });
   };
 
   render() {
     return (
-      <div style={{padding: '0', margin: '0', zIndex: '1'}}>
+      <div style={{padding: '0', margin: '0'}}>
         <Helmet
         title="Jacob Hixon — Web Developer"
         meta={[
@@ -58,10 +68,11 @@ class Layout extends Component {
           { name: 'keywords', content: 'web, developer' },
         ]}
         />
-        <Header handleMouseDown={this.handleMouseDown}/>
-          <Nav handleMouseDown={this.handleMouseDown} navVisible={this.state.navVisible} />
-          <div style={{minHeight: '10vh', padding: '10px', marginBottom: '10vh'}}/ >
-          {this.props.children}
+        <Header handleMouseDown={this.handleMouseDown}>
+          <h1 style={{fontSize: '100px'}}>HELLO.</h1>
+        </Header>
+        <Nav handleMouseDown={this.handleMouseDown} navVisible={this.state.navVisible} />
+        {this.props.children}
       </div>
     );
   }
