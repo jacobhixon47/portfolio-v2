@@ -5,12 +5,13 @@ import Layout from '../components/layout/layout';
 const IndexPage = () => (
   <Layout>
     <div style={{
+      position: 'relative',
       width: '100vw',
       height: '100vh',
       margin: '0',
       backgroundColor: '#ddd',
       padding: '50px',
-      zIndex: '3'
+      zIndex: '1'
     }}>
       <h1 style={{
         fontSize: '100px',
