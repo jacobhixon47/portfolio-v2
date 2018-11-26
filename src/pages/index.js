@@ -11,7 +11,8 @@ const IndexPage = () => (
       margin: '0',
       backgroundColor: '#ddd',
       padding: '50px',
-      zIndex: '1'
+      zIndex: '1',
+      backgroundImage: 'url(https://bit.ly/2TEnL1A)'
     }}>
       <h1 style={{
         fontSize: '100px',
