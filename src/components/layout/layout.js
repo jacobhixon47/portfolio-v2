@@ -31,26 +31,39 @@ class Layout extends Component {
   handleScroll() {
     let header = document.getElementById('main-header');
     let title = document.getElementById('main-title');
+    let subtitle = document.getElementById('header-subtitle');
+    let subH2 = document.getElementById('header-sub-h2');
+    let subH3 = document.getElementById('header-sub-h3');
+    let scrollMsg = document.getElementById('scroll-msg');
     let prevScrollTop = this.state.prevScrollTop;
     let scrollTop = window.pageYOffset || document.scrollTop;
 
     if (prevScrollTop < scrollTop && scrollTop < window.innerHeight) {
       title.classList.add('title-slide-right');
+      subtitle.classList.add('show');
+      subtitle.classList.add('show');
+      subH2.classList.add('show');
+      subH3.classList.add('show');
+      scrollMsg.classList.add('slide-left');
+
       this.setState({ headerAnimated: true, prevScrollTop: scrollTop });
     // } else if (prevScrollTop < scrollTop && scrollTop >= window.innerHeight * 1 && this.state.headerAnimated) {
     //   // header.classList.remove('fixed');
-  } else if (prevScrollTop > scrollTop && scrollTop < window.innerHeight / 2.2) {
+  } else if (prevScrollTop > scrollTop && scrollTop <= window.innerHeight / 4) {
       // header.classList.add('fixed');
-      this.setState({ headerAnimated: false, prevScrollTop: scrollTop });
       title.classList.remove('title-slide-right');
+      subtitle.classList.remove('show');
+      subH2.classList.remove('show');
+      subH3.classList.remove('show');
+      scrollMsg.classList.remove('slide-left');
+
+      this.setState({ headerAnimated: false, prevScrollTop: scrollTop });
     }
+
   }
 
   handleMouseDown(e) {
     this.toggleMenu();
-
-    console.log("clicked menu");
-    console.log("nav visible: " + this.state.navVisible);
     e.stopPropagation();
   }
 
@@ -68,9 +81,7 @@ class Layout extends Component {
           { name: 'keywords', content: 'web, developer' },
         ]}
         />
-        <Header handleMouseDown={this.handleMouseDown}>
-          <h1 style={{fontSize: '100px'}}>HELLO.</h1>
-        </Header>
+        <Header handleMouseDown={this.handleMouseDown}/>
         <Nav handleMouseDown={this.handleMouseDown} navVisible={this.state.navVisible} />
         {this.props.children}
       </div>
