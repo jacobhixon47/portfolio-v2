@@ -24,19 +24,58 @@ const IndexPage = () => (
       }}>
         <h1 style={{
           fontSize: '100px',
-          backgroundColor: '#bbb',
+          background: 'rgba(255, 255, 255, 0.5)',
           textAlign: 'left',
           paddingLeft: '20px',
           paddingRight: '20px',
           paddingBottom: '10px',
           paddingTop: '10px',
-          width: '40vw'
+          width: '50vw'
         }}>
-          Hi there!
+          Who am I?
         </h1>
-        <h3>Welcome to your new Gatsby site.</h3>
-        <p>Now go build something great.</p>
-        <Link to="/page-2/">Go to page 2</Link>
+        <div style={{
+          background: 'rgba(150, 150, 150, 0.8)',
+          textAlign: 'left',
+          paddingLeft: '20px',
+          paddingRight: '20px',
+          paddingBottom: '10px',
+          paddingTop: '10px',
+          width: '80vw',
+          color: '#bbb'
+        }}>
+          <h3>This section is currently under maintenance.</h3>
+          <p><i>Check back later!</i></p>
+        </div>
+        <div style={{
+          marginTop: '20px',
+          background: 'rgba(125, 125, 125, 0.8)',
+          textAlign: 'left',
+          paddingLeft: '20px',
+          paddingRight: '20px',
+          paddingBottom: '10px',
+          paddingTop: '10px',
+          width: '65vw',
+          color: '#bbb'
+        }}>
+          <h3>This section is currently under maintenance.</h3>
+          <p><i>Check back later!</i></p>
+        </div>
+        <div style={{
+          marginTop: '20px',
+          background: 'rgba(100, 100, 100, 0.8)',
+          textAlign: 'left',
+          paddingLeft: '20px',
+          paddingRight: '20px',
+          paddingBottom: '10px',
+          paddingTop: '10px',
+          width: '85vw',
+          color: '#bbb'
+        }}>
+          <h3>This section is currently under maintenance.</h3>
+          <p><i>Check back later!</i></p>
+          <Link to="/page-2/">Go to page 2</Link>
+        </div>
       </div>
     </div>
   </Layout>
