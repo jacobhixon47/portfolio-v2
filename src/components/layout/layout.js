@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Header from '../header/header';
-import Button from '../button/button';
 import Nav from '../nav/nav';
 
-import { MdMenu } from 'react-icons/md';
 import './layout.css';
 
 class Layout extends Component {
@@ -29,7 +26,6 @@ class Layout extends Component {
   }
 
   handleScroll() {
-    let header = document.getElementById('main-header');
     let title = document.getElementById('main-title');
     let subtitle = document.getElementById('header-subtitle');
     let subH2 = document.getElementById('header-sub-h2');
