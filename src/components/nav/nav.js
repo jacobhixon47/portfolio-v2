@@ -4,20 +4,17 @@ import { Link } from 'gatsby';
 import './nav.css';
 
 const Nav = (props) => {
-  let visible = 'hide';
-
-  if (props.navVisible) {
-    visible = 'show';
-  }
-
   return (
     <div id="nav"
         onMouseDown={props.handleMouseDown}
-        className={visible}>
-      <h2><Link to='/'>Home</Link></h2>
-      <h2><Link to='/'>About</Link></h2>
-      <h2><Link to='/'>Contact</Link></h2>
-      <h2><Link to='/'>Search</Link></h2>
+        className={props.navVisible ? 'show' : 'hide'}
+        style={{color: '#ddd'}}>
+      <h2>Phone: +1 (615) 812-8684</h2>
+      <h2>Email: jacobhixon47@gmail.com</h2>
+      <h2>Github: <a href='https://linkedin.com/in/jacobhixon/'
+                      style={{color: '#ddd'}}>jacobhixon47</a></h2>
+      <h2>LinkedIn: <a href='https://linkedin.com/in/jacobhixon/'
+                      style={{color: '#ddd'}}>Jacob Hixon</a></h2>
     </div>
   );
 }

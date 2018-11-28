@@ -1,0 +1,35 @@
+.contact-section {
+  top: 25px;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+.contact-panel {
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ddd;
+  transform: translate3d(-21vw, 0, 0);
+  transition: all 1s;
+}
+
+.contact-panel:hover {
+  cursor: pointer;
+}
+
+.contact-panel.no-link:hover {
+  transition: all 1s;
+  transform: translate3d(0, 0, 0);
+}
+
+.contact-panel h3 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  margin-bottom: 0;
+}

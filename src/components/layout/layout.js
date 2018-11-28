@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import Button from '../button/button';
 import { MdMenu } from 'react-icons/md';
 import Nav from '../nav/nav';
+import Contact from '../contact/contact';
 
 import './layout.css';
 
@@ -37,9 +38,7 @@ class Layout extends Component {
           { name: 'keywords', content: 'web, developer' },
         ]}
         />
-        <Button handleMouseDown={this.handleMouseDown} style={{zIndex: '999'}}>
-          <MdMenu style={{color: '#ddd', width: '1.5em', height: '1.5em'}}/>
-        </Button>
+        <Contact />
         <Nav handleMouseDown={this.handleMouseDown} navVisible={this.state.navVisible} />
         {this.props.children}
       </div>
