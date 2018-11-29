@@ -12,9 +12,10 @@
   text-align: right;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #ddd;
+  background-color: #3E6990;
   transform: translate3d(-21vw, 0, 0);
   transition: all 1s;
+  border-radius: 25px;
 }
 
 .contact-panel:hover {
@@ -27,6 +28,7 @@
 }
 
 .contact-panel h3 {
+  color: #ddd;
   display: inline-flex;
   align-items: center;
   justify-content: center;

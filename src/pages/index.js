@@ -41,7 +41,7 @@ class IndexPage extends Component {
           height: '100vh',
           margin: '0',
           backgroundColor: '#ddd',
-          backgroundImage: 'url(https://bit.ly/2TEnL1A)'
+          // backgroundImage: 'url(https://bit.ly/2TEnL1A)'
         }}>
           <div style={{
             height: '100vh',
@@ -49,32 +49,33 @@ class IndexPage extends Component {
             margin: '0',
             top: '0',
             left: '0',
-            background: 'rgba(0, 0, 0, 0.4)',
+            background: '#394551',
             zIndex: '1',
             padding: '50px',
           }}>
             <h1 style={{
               fontSize: '100px',
-              background: 'rgba(255, 255, 255, 0.5)',
+              background: '#657787',
               textAlign: 'left',
               paddingLeft: '20px',
               paddingRight: '20px',
               paddingBottom: '10px',
               paddingTop: '10px',
-              width: '50vw'
+              width: '50vw',
+              color: '#ccc'
             }}>
             Who am I?
             </h1>
             <div style={{
               marginTop: '20px',
-              background: 'rgba(100, 100, 100, 0.8)',
+              background: '#657787',
               textAlign: 'left',
               paddingLeft: '20px',
               paddingRight: '20px',
               paddingBottom: '10px',
               paddingTop: '10px',
               width: '85vw',
-              color: '#bbb'
+              color: '#ccc'
             }}>
               <h3>This section is currently under maintenance.</h3>
               <p><i>Check back later!</i></p>

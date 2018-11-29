@@ -12,10 +12,10 @@ const Contact = (props) => (
       <h3>jacobhixon47@gmail.com<MdMailOutline style={{marginLeft: '10px'}}/></h3>
     </div>
     <div className='contact-panel'>
-      <h3><a href='https://github.com/jacobhixon47'><FaGithub/></a></h3>
+      <h3><a href='https://github.com/jacobhixon47'><FaGithub style={{color: '#ddd'}}/></a></h3>
     </div>
     <div className='contact-panel'>
-      <h3><a href='https://linkedin.com/in/jacobhixon/'><FaLinkedin /></a></h3>
+      <h3><a href='https://linkedin.com/in/jacobhixon/'><FaLinkedin style={{color: '#ddd'}}/></a></h3>
     </div>
   </div>
 )
