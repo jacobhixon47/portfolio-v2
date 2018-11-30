@@ -8,6 +8,10 @@
 
 A web developer portfolio site for myself.
 
+### Base color and palettes
+
+- _[coolors.co](https://coolors.co/00283b-004667-006494-4c92b4-7c95aa)_
+- _[color-hex.com](https://www.color-hex.com/color/006494)_
 ### Live
 
 _(The site will be linked here once live.)_
