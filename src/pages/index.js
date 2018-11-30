@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import Header from '../components/header/header';
 import Layout from '../components/layout/layout';
+import './index.css';
 
 class IndexPage extends Component {
   constructor(props) {
@@ -46,40 +47,58 @@ class IndexPage extends Component {
           <div style={{
             height: '100vh',
             width: '100vw',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-start',
+            alignItems: 'center',
             margin: '0',
             top: '0',
             left: '0',
-            background: '#394551',
+            background: '#004667',
             zIndex: '1',
             padding: '50px',
           }}>
             <h1 style={{
               fontSize: '100px',
-              background: '#657787',
-              textAlign: 'left',
+              textAlign: 'center',
               paddingLeft: '20px',
               paddingRight: '20px',
               paddingBottom: '10px',
               paddingTop: '10px',
               width: '50vw',
-              color: '#ccc'
+              color: '#ccc',
+              borderBottom: '1px solid #7C95AA'
             }}>
             Who am I?
             </h1>
             <div style={{
               marginTop: '20px',
-              background: '#657787',
               textAlign: 'left',
               paddingLeft: '20px',
               paddingRight: '20px',
               paddingBottom: '10px',
               paddingTop: '10px',
               width: '85vw',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
               color: '#ccc'
             }}>
               <h3>This section is currently under maintenance.</h3>
               <p><i>Check back later!</i></p>
-              <Link to="/page-2/">Go to page 2</Link>
+              <Link to="/page-2/" style={{color: "#7C95AA"}}>
+                <button className='blue-button-1' style={{
+                  width: '15vw',
+                  height: '10vh',
+                  background: '#00947A',
+                  color: '#ccc',
+                  border: 'none',
+                  borderRadius: '50px'
+                }}>
+                  Go to page 2
+                </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,0 +1,9 @@
+.blue-button-1 {
+  transition: all 0.5s;
+}
+
+.blue-button-1:hover {
+  transition: all .7s;
+  cursor: pointer;
+  background: rgba(0, 148, 122, .4) !important;
+}
