@@ -38,8 +38,11 @@ class Layout extends Component {
           { name: 'keywords', content: 'web, developer' },
         ]}
         />
-        <Contact />
         <Nav handleMouseDown={this.handleMouseDown} navVisible={this.state.navVisible} />
+        <div id='left-sidebar' />
+        <div id='right-sidebar'>
+          <Contact />
+        </div>
         {this.props.children}
       </div>
     );

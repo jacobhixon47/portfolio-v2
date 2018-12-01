@@ -5,14 +5,14 @@ import './contact.css';
 
 const Contact = (props) => (
   <div className='contact-section'>
-    <div className='contact-panel no-link'>
-      <h3>jacobhixon47@gmail.com<MdMailOutline style={{marginLeft: '10px'}}/></h3>
+    <div className='contact-panel'>
+      <h3><MdMailOutline/></h3>
     </div>
     <div className='contact-panel'>
-      <h3><a href='https://github.com/jacobhixon47'><FaGithub style={{color: '#ddd'}}/></a></h3>
+      <h3><a href='https://github.com/jacobhixon47' target='_blank'><FaGithub/></a></h3>
     </div>
     <div className='contact-panel'>
-      <h3><a href='https://linkedin.com/in/jacobhixon/'><FaLinkedin style={{color: '#ddd'}}/></a></h3>
+      <h3><a href='https://linkedin.com/in/jacobhixon/' target='_blank'><FaLinkedin/></a></h3>
     </div>
   </div>
 )

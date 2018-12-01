@@ -64,12 +64,14 @@
 #header-sub-h2 {
   transform: translate3d(0, 200vh, 0);
   margin-bottom: 10px;
+  color: #ddd;
 }
 
 #header-sub-h3 {
   transform: translate3d(0, 200vh, 0);
   margin-bottom: 10px;
   transition-delay: .25s;
+  color: #ddd;
 }
 
 #header-sub-h2.show, #header-sub-h3.show {

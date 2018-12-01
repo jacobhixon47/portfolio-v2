@@ -1,1 +1,23 @@
+#left-sidebar {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  height: calc(100vh - 60px);
+  width: 60px;
+  background-color: #ddd;
+  z-index: 99;
+}
 
+#right-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 60px;
+  height: calc(100vh - 60px);
+  width: 60px;
+  transform: translateX(calc(100vw - 60px));
+  background-color: #ddd;
+  z-index: 99;
+}

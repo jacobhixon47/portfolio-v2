@@ -1,39 +1,33 @@
 .contact-section {
-  top: 10vh;
-  position: fixed;
-  z-index: 999;
+  width: 60px;
+  height: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: space-between;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
 }
 
 .contact-panel {
-  text-align: right;
+  text-align: center;
   padding: 15px;
-  margin-bottom: 10px;
-  background-color: #006494;
-  transform: translate3d(-21vw, 0, 0);
   transition: all 1s;
-  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .contact-panel:hover {
   cursor: pointer;
-  background-color: rgba(0, 100, 148, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
   transition: all 0.5s;
 }
 
-.contact-panel.no-link:hover {
-  transition: all 1s;
-  transform: translate3d(0, 0, 0);
+.contact-panel > h3 {
+    margin: 0;
 }
 
-.contact-panel h3 {
-  color: #ddd;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-  margin-bottom: 0;
+.contact-panel > h3 > a {
+  color: #111;
 }

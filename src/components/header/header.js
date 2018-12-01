@@ -6,7 +6,7 @@ import './header.css';
 const Header = (props) => (
   <div id='main-header'>
     <div id='main-title' className={props.headerAnimated ? 'title-slide-right' : ''}>
-      <h1 style={{fontSize: '100px'}}>HELLO.</h1>
+      <h1 style={{fontSize: '100px', color: '#ddd'}}>HELLO.</h1>
     </div>
     <div id='header-subtitle' className={props.headerAnimated ? 'show' : ''}>
       <div style={{borderLeft: '2px solid #ddd', paddingLeft: '10px'}}>

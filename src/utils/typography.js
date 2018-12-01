@@ -1,12 +1,6 @@
 import Typography from "typography";
+import moragaTheme from 'typography-theme-moraga';
 
-const typography = new Typography(
-  {
-    // height: '100vh',
-    // width: '100vw',
-    // overflow: 'hidden',
-    // backgroundColor: 'linear-gradient(-60deg, blue 5%, purple 80%)'
-  }
-);
+const typography = new Typography(moragaTheme);
 
 export default typography;
