@@ -9,11 +9,12 @@ const Nav = (props) => {
     <div id='nav'>
       <div id='nav-title'><h3>JH</h3></div>
       <div id='nav-list'>
-        <div className='nav-item'><h4>About</h4></div>
-        <div className='nav-item'><h4>Projects</h4></div>
-        <div className='nav-item'><h4>Contact</h4></div>
-        <div className='nav-item'><h4>About</h4></div>
-        <Button onMouseDown={props.handleMouseDown}>
+        <div id='nav-links'>
+          <div className={props.navVisible ? 'nav-item show' : 'nav-item'}><h4>About</h4></div>
+          <div className={props.navVisible ? 'nav-item show' : 'nav-item'}><h4>Projects</h4></div>
+          <div className={props.navVisible ? 'nav-item show' : 'nav-item'}><h4>Contact</h4></div>
+        </div>
+        <Button handleMouseDown={props.handleMouseDown} style={{zIndex: '5', backgroundColor: '#ccc'}}>
           <MdMenu />
         </Button>
       </div>

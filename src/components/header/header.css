@@ -1,110 +1,33 @@
-#main-header, #main-title, #header-subtitle {
-  width: 100vw;
-  max-width: 100vw;
-}
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 
 #main-header {
-  background-color: #00283B;
-  margin-bottom: 0;
-  margin-top: 0px;
-  height: 200vh;
-  padding: 10px;
+  position: relative;
+  font-family: 'Pacifico', cursive;
+  width: 100vw;
+  max-width: 100vw;
+  background-image: url('../../images/jellyfish.png');
+  background-size: cover;
+  background-position: left;
+  margin: 0;
+  height: 100vh;
   transition: left 2s;
-  z-index: -2;
+  z-index: -1;
+  padding: 0;
+  transform: translateZ(-1px) scale(2);
 }
 
-#main-title, #header-subtitle {
-  position: fixed;
-  height: 100vh;
-  left: 0;
-  margin: 0px;
+#header-overlay {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 0px;
-  color: #ccc;
-  font-size: 30px;
-  transition: all 1s;
-}
-
-#main-title {
-  transition-delay: 1s;
-}
-
-#main-title.title-slide-right,
-#header-subtitle.show,
-#header-sub-h2,
-#header-sub-h3,
-#header-sub-h2.show,
-#header-sub-h3.show,
-#scroll-msg,
-#scroll-msg.slide-left {
-  transition: all 1s;
-}
-
-#main-title.title-slide-right {
-  color: #7C95AA;
-  left: 55vw;
-}
-
-#header-subtitle {
-  transform: translate3d(-20vw, 200vh, 0);
-  transition-delay: .75s;
-}
-
-#header-subtitle.show, #header-sub-h2, #scroll-msg {
-  transition-delay: .5s;
-}
-
-#header-subtitle.show {
-  transform: translate3d(-20vw, 0vh, 0);
-}
-
-#header-sub-h2 {
-  transform: translate3d(0, 200vh, 0);
-  margin-bottom: 10px;
-  color: #ddd;
-}
-
-#header-sub-h3 {
-  transform: translate3d(0, 200vh, 0);
-  margin-bottom: 10px;
-  transition-delay: .25s;
-  color: #ddd;
-}
-
-#header-sub-h2.show, #header-sub-h3.show {
-  transform: translate3d(0, 0vh, 0);
-}
-
-#header-sub-h2.show {
-  transition-delay: .75s;
-}
-
-#header-sub-h3.show {
-  transition-delay: 1s;
-}
-
-#scroll-msg {
-  position: fixed;
   width: 100vw;
-  max-width: 100vw;
   height: 100vh;
-  left: 0;
-  margin: 0px !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding-top: 0px;
-  padding-bottom: 20px;
-  color: #ccc;
-  font-size: 30px;
-  transition-delay: 1.25s;
+  background: linear-gradient(120deg, rgba(50, 50, 50, 1) 5%, rgba(50, 50, 50, 0.2) 90%);
 }
 
-#scroll-msg.slide-left {
-  left: -40vw;
-  color: #7C95AA;
+#header-title p {
+  padding: 0 70px 0 100px;
+  background-color: rgba(150, 150, 150, 0.4);
 }

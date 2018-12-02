@@ -19,9 +19,8 @@ class Layout extends Component {
     this.toggleMenu = this.toggleMenu.bind(this);
   }
 
-  handleMouseDown(e) {
+  handleMouseDown() {
     this.toggleMenu();
-    e.stopPropagation();
   }
 
   toggleMenu() {
@@ -30,7 +29,7 @@ class Layout extends Component {
 
   render() {
     return (
-      <div style={{padding: '0', margin: '0', backgroundColor: 'linear-gradient(-60deg, blue 5%, purple 80%)'}}>
+      <div id='layout'>
         <Helmet
         title="Jacob Hixon — Web Developer"
         meta={[
@@ -39,10 +38,9 @@ class Layout extends Component {
         ]}
         />
         <Nav handleMouseDown={this.handleMouseDown} navVisible={this.state.navVisible} />
+        <Contact />
         <div id='left-sidebar' />
-        <div id='right-sidebar'>
-          <Contact />
-        </div>
+        <div id='right-sidebar' />
         {this.props.children}
       </div>
     );
