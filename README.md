@@ -14,7 +14,8 @@ A web developer portfolio site for myself.
 - _[color-hex.com](https://www.color-hex.com/color/006494)_
 ### Live
 
-_(The site will be linked here once live.)_
+_The live site can be found [here](https://jacobhixon.surge.sh)._
+- Deployed using [Surge](https://surge.sh)
 
 ## Project Requirements
 
