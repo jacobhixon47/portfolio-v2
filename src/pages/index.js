@@ -22,7 +22,7 @@ class IndexPage extends Component {
     // window.addEventListener('scroll', this.handleScroll);
     setTimeout(() => {
         this.setState({pageLoaded: true});
-      }, 1000);
+      }, 500);
   }
 
   render() {
