@@ -19,6 +19,10 @@ class Layout extends Component {
     this.toggleMenu = this.toggleMenu.bind(this);
   }
 
+  componentDidMount() {
+    setTimeout(this.setState({layoutLoaded: true}), 1000);
+  }
+
   handleMouseDown() {
     this.toggleMenu();
   }

@@ -9,39 +9,27 @@ class IndexPage extends Component {
     super(props);
 
     this.state = {
-      headerAnimated: false,
+      pageLoaded: false,
       prevScrollTop: 0,
       parallax: false
     }
 
-    this.handleScroll = this.handleScroll.bind(this);
+    // this.handleScroll = this.handleScroll.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll() {
-    let prevScrollTop = this.state.prevScrollTop;
-    let scrollTop = window.pageYOffset || document.scrollTop;
-
-    if (prevScrollTop < scrollTop && scrollTop < window.innerHeight) {
-      this.setState({ headerAnimated: true, prevScrollTop: scrollTop });
-    } else if (prevScrollTop > scrollTop && scrollTop <= window.innerHeight / 4) {
-      this.setState({ headerAnimated: false, prevScrollTop: scrollTop });
-    } else if (scrollTop > window.innerHeight) {
-      this.setState({parallax: true});
-    } else if (scrollTop < window.innerHeight) {
-      this.setState({parallax: false});
-    }
+    // window.addEventListener('scroll', this.handleScroll);
+    setTimeout(() => {
+        this.setState({pageLoaded: true});
+      }, 1000);
   }
 
   render() {
     return (
       <Layout>
         <div className='parallax'>
-          <Header />
+          <Header pageLoaded={this.state.pageLoaded}/>
           <div style={{
             position: 'relative',
             width: '100vw',

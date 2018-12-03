@@ -11,10 +11,11 @@
   background-position: left;
   margin: 0;
   height: 100vh;
-  transition: left 2s;
   z-index: -1;
   padding: 0;
   transform: translateZ(-1px) scale(2);
+  opacity: 0;
+  transition: all 1s;
 }
 
 #header-overlay {
@@ -27,7 +28,21 @@
   background: linear-gradient(120deg, rgba(50, 50, 50, 1) 5%, rgba(50, 50, 50, 0.2) 90%);
 }
 
+#header-title {
+  transition-delay: 1s !important;
+  transition: all 1.5s;
+  opacity: 0;
+}
+
 #header-title p {
   padding: 0 70px 0 100px;
   background-color: rgba(150, 150, 150, 0.4);
+}
+
+#main-header.show-header {
+  opacity: 1;
+}
+
+#header-title.show-title {
+  opacity: 1;
 }
