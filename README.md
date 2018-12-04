@@ -8,14 +8,13 @@
 
 A web developer portfolio site for myself.
 
-### Base color and palettes
+<!-- ### Base color and palettes
 
 - _[coolors.co](https://coolors.co/00283b-004667-006494-4c92b4-7c95aa)_
-- _[color-hex.com](https://www.color-hex.com/color/006494)_
+- _[color-hex.com](https://www.color-hex.com/color/006494)_ -->
 ### Live
 
 _The live site can be found [here](https://jacobhixon.surge.sh)._
-- Deployed using [Surge](https://surge.sh)
 
 ## Project Requirements
 
@@ -33,7 +32,17 @@ _The live site can be found [here](https://jacobhixon.surge.sh)._
 
 ## Technologies Used
 
-* _[GatsbyJS](https://www.gatsbyjs.org/docs/)_
+#### Generated with
+
+_[GatsbyJS](https://www.gatsbyjs.org/docs/)_
+
+#### Deployed with
+
+_[Surge](https://surge.sh)_
+
+#### Styled with
+
+_[Emotion](https://emotion.sh) — CSS-in-JS_
 
 ### License
 

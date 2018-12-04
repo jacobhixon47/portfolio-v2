@@ -1,7 +1,6 @@
 /** @jsx jsx */
 
 import React from 'react';
-import Button from '../button/button';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import img from '../../images/jellyfish.png';
 import { jsx, css, keyframes } from '@emotion/core';

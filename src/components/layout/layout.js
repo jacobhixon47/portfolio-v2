@@ -2,8 +2,6 @@
 
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import Button from '../button/button';
-import { MdMenu } from 'react-icons/md';
 import Nav from '../nav/nav';
 import Contact from '../contact/contact';
 import {jsx, css} from '@emotion/core';

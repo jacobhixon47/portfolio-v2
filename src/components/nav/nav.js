@@ -3,10 +3,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { MdMenu } from 'react-icons/md';
-import Button from '../button/button';
+import NavButton from '../navButton/navButton';
 import { jsx, css } from '@emotion/core';
 import { myFadeInLeft, myFadeIn, myFadeOut, mySlideInDown } from '../../utils/animations';
-// import './nav.css';
 
 const navStyle = css`
   width: 100vw;
@@ -92,6 +91,9 @@ const navItemStyle = css`
   }
 `;
 
+const iconStyle = css`
+  color: #555;
+`;
 
 const Nav = (props) => {
   return (
@@ -103,9 +105,9 @@ const Nav = (props) => {
           <div css={navItemStyle}><h4>Projects</h4></div>
           <div css={navItemStyle}><h4>Contact</h4></div>
         </div>
-        <Button handleMouseDown={props.handleMouseDown} style={{zIndex: '5', backgroundColor: '#ccc'}}>
-          <MdMenu />
-        </Button>
+        <NavButton handleMouseDown={props.handleMouseDown}>
+          <MdMenu css={iconStyle}/>
+        </NavButton>
       </div>
     </div>
   );
