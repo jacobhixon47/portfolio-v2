@@ -30,7 +30,6 @@ const headerOverlayStyle = css`
   justify-content: center;
   align-items: center;
   background: linear-gradient(120deg, rgba(50, 50, 50, 1) 5%, rgba(50, 50, 50, 0.2) 90%);
-  animation: ${myFadeIn} 1s .5s both;
 `;
 
 const headerContentStyle = css`
