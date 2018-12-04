@@ -4,6 +4,7 @@ import Button from '../button/button';
 import { MdMenu } from 'react-icons/md';
 import Nav from '../nav/nav';
 import Contact from '../contact/contact';
+import { Animated } from 'react-animated-css';
 
 import './layout.css';
 
@@ -31,12 +32,15 @@ class Layout extends Component {
     return (
       <div id='layout'>
         <Helmet
-        title="Jacob Hixon — Web Developer"
-        meta={[
-          { name: 'description', content: 'Web' },
-          { name: 'keywords', content: 'web, developer' },
-        ]}
-        />
+          title="Jacob Hixon — Web Developer"
+          meta={[
+            { name: 'description', content: 'Web' },
+            { name: 'keywords', content: 'web, developer' },
+          ]}>
+          <link rel='stylesheet'
+            href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'
+          />
+        </Helmet>
         <Nav handleMouseDown={this.handleMouseDown} navVisible={this.state.navVisible} />
         <Contact />
         <div id='left-sidebar' />
