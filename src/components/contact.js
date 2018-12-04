@@ -36,6 +36,9 @@ const contactPanelStyle = css`
   justify-content: center;
   align-items: center;
   width: 100%;
+  & h3 {
+    margin: 0;
+  }
   & h3 a {
     margin: 0;
     color: #111;

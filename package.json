@@ -16,6 +16,7 @@
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-transformer-sharp": "^2.1.4",
     "react": "^16.5.1",
+    "react-animate-on-scroll": "^2.1.5",
     "react-animated-css": "^1.0.4",
     "react-animations": "^1.0.0",
     "react-dom": "^16.5.1",

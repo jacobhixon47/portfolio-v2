@@ -14,22 +14,24 @@ class IndexPage extends Component {
       parallax: false
     }
 
-    this.handleScroll = this.handleScroll.bind(this);
-    this.componentDidMount = this.componentDidMount.bind(this);
+    // this.handleScroll = this.handleScroll.bind(this);
+    // this.componentDidMount = this.componentDidMount.bind(this);
+    this.handleClickHeaderScrollButton = this.handleClickHeaderScrollButton.bind(this);
   }
 
-  componentDidMount() {
-
-  }
-
-  handleScroll() {
-
+  handleClickHeaderScrollButton() {
+    window.scrollTo({
+      top: window.innerHeight,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
   render() {
     return (
       <Layout>
-          <Header pageLoaded={this.state.pageLoaded}/>
+          <Header pageLoaded={this.state.pageLoaded}
+                  handleClickHeaderScrollButton={this.handleClickHeaderScrollButton}/>
           <About />
       </Layout>
     );

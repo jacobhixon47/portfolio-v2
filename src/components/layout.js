@@ -31,6 +31,12 @@ const rightSidebarStyle = css`
   z-index: 99;
 `;
 
+const mainContentStyle = css`
+  max-width: calc(100vw - 120px);
+  max-height: calc(100vh - 60px);
+  margin-top: 60px;
+`;
+
 class Layout extends Component {
   constructor(props, context) {
     super(props, context);
@@ -77,7 +83,9 @@ class Layout extends Component {
         <Contact />
         <div css={leftSidebarStyle} />
         <div css={rightSidebarStyle} />
-        {this.props.children}
+        <div css={mainContentStyle}>
+          {this.props.children}
+        </div>
       </div>
     );
   }
