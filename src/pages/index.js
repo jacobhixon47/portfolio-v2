@@ -19,16 +19,11 @@ class IndexPage extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-    setTimeout(() => {
-        this.setState({pageLoaded: true});
-      }, 500);
+
   }
 
   handleScroll() {
-    if (document.getElementById('parallax').scrollY > window.innerHeight / 5) {
-      document.getElementById('parallax').scroll(0, window.innerHeight);
-    }
+
   }
 
   render() {
