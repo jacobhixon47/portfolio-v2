@@ -3,9 +3,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { MdMenu } from 'react-icons/md';
-import NavButton from '../navButton/navButton';
+import NavButton from './navButton';
 import { jsx, css } from '@emotion/core';
-import { myFadeInLeft, myFadeIn, myFadeOut, mySlideInDown } from '../../utils/animations';
+import { myFadeInLeft, myFadeIn, myFadeOut, mySlideInDown } from '../utils/animations';
 
 const navStyle = css`
   width: 100vw;

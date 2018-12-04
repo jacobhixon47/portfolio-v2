@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Header from '../components/header/header';
-import Layout from '../components/layout/layout';
-import About from '../components/about/about';
+import Header from '../components/header';
+import Layout from '../components/layout';
+import About from '../components/about';
 import './index.css';
 
 class IndexPage extends Component {

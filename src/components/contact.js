@@ -4,7 +4,7 @@ import React from 'react';
 import { MdMailOutline } from 'react-icons/md';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { jsx, css } from '@emotion/core';
-import { myFadeInUp } from '../../utils/animations';
+import { myFadeInUp } from '../utils/animations';
 
 const contactSectionStyle = css`
   top: 25vh;

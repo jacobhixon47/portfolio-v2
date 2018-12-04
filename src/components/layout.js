@@ -2,8 +2,8 @@
 
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import Nav from '../nav/nav';
-import Contact from '../contact/contact';
+import Nav from './nav';
+import Contact from './contact';
 import {jsx, css} from '@emotion/core';
 
 const leftSidebarStyle = css`

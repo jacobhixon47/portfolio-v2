@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { MdKeyboardArrowDown } from 'react-icons/md';
-import img from '../../images/jellyfish.png';
+import img from '../images/jellyfish.png';
 import { jsx, css, keyframes } from '@emotion/core';
-import { myFadeInLeft, myFadeIn } from '../../utils/animations';
+import { myFadeInLeft, myFadeIn } from '../utils/animations';
 
 const headerStyle = css`
   width: 100vw;
