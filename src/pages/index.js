@@ -31,7 +31,8 @@ class IndexPage extends Component {
     return (
       <Layout>
           <Header pageLoaded={this.state.pageLoaded}
-                  handleClickHeaderScrollButton={this.handleClickHeaderScrollButton}/>
+                  handleClickHeaderScrollButton={this.handleClickHeaderScrollButton}
+                  headerImage={this.props.data.headerImage}/>
           <About />
       </Layout>
     );
@@ -39,3 +40,15 @@ class IndexPage extends Component {
 }
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query {
+    headerImage: file(relativePath: { eq: "jellyfish.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 1240) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
