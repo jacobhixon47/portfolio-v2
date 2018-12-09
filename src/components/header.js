@@ -3,7 +3,7 @@
 import React from 'react';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { FaArrowDown } from 'react-icons/fa';
-import img from '../images/jellyfish.png';
+import img from '../images/ocean.png';
 import { jsx, css, keyframes } from '@emotion/core';
 import { myFadeInLeft, myFadeIn, myBounce } from '../utils/animations';
 
@@ -45,12 +45,9 @@ const headerContentStyle = css`
 
 const headerTitleStyle = css`
   color: #ddd;
-  width: 30vw;
   padding: 10px 20px 10px 20px;
   white-space: nowrap;
-  background-color: rgba(150, 150, 150, 0.4);
   text-align: center;
-  font-family: 'Pacifico', cursive;
   font-size: 100px;
 `;
 
@@ -75,7 +72,7 @@ const Header = (props) => (
   <div css={headerStyle}>
     <div css={headerOverlayStyle}>
       <div css={headerContentStyle}>
-        <h4 css={headerTitleStyle}>hello.</h4>
+        <h4 css={headerTitleStyle}>Hello, I'm Jacob.</h4>
       </div>
       <div css={scrollMsgStyle} onClick={props.handleClickHeaderScrollButton}>
         <h3>scroll</h3>

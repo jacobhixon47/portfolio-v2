@@ -10,7 +10,7 @@ import { jsx, css } from '@emotion/core';
 const aboutStyle = css`
   position: relative;
   width: calc(100vw - 120px);
-  height: calc(100vh - 60px);
+  height: 150vh;
   left: 60px;
   background-color: #ddd;
   margin: 0;
@@ -61,36 +61,17 @@ const About = props => (
     <Row css={aboutBodyStyle}>
       <Col lg={6} />
       <Col lg={6}>
-        <ScrollAnimation animateIn='fadeInRight' duration={1} delay={750} animateOnce={true}>
-          <Row center={['lg', 'md', 'sm']} middle={['lg', 'md', 'sm']}>
-            <ProgressBar skill='CSS' percentage='80' />
-          </Row>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn='fadeInRight' duration={1} delay={850} animateOnce={true}>
-          <Row center={['lg', 'md', 'sm']} middle={['lg', 'md', 'sm']}>
-            <ProgressBar skill='HTML' percentage='90' />
-          </Row>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn='fadeInRight' duration={1} delay={950} animateOnce={true}>
-          <Row center={['lg', 'md', 'sm']} middle={['lg', 'md', 'sm']}>
-            <ProgressBar skill='Javascript' percentage='80' />
-          </Row>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn='fadeInRight' duration={1} delay={1050} animateOnce={true}>
-          <Row center={['lg', 'md', 'sm']} middle={['lg', 'md', 'sm']}>
-            <ProgressBar skill='React' percentage='70' />
-          </Row>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn='fadeInRight' duration={1} delay={1150} animateOnce={true}>
-          <Row center={['lg', 'md', 'sm']} middle={['lg', 'md', 'sm']}>
-            <ProgressBar skill='NodeJS' percentage='70' />
-          </Row>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn='fadeInRight' duration={1} delay={1250} animateOnce={true}>
-          <Row center={['lg', 'md', 'sm']} middle={['lg', 'md', 'sm']}>
-            <ProgressBar skill='AngularJS/2/4' percentage='70' />
-          </Row>
-        </ScrollAnimation>
+        <Row top={['lg', 'md', 'sm']} middle={['lg', 'md', 'sm']}>
+          <ProgressBar skill='CSS' percentage='80' />
+          <ProgressBar skill='HTML' percentage='90' />
+          <ProgressBar skill='Javascript' percentage='80' />
+          <ProgressBar skill='React' percentage='70' />
+          <ProgressBar skill='NodeJS' percentage='70' />
+          <ProgressBar skill='AngularJS/2/4' percentage='70' />
+          <ProgressBar skill='AngularJS/2/4' percentage='70' />
+          <ProgressBar skill='AngularJS/2/4' percentage='70' />
+          <ProgressBar skill='AngularJS/2/4' percentage='70' />
+        </Row>
       </Col>
     </Row>
   </Grid>
