@@ -57,14 +57,14 @@ const vertFlex = css`
 const About = props => (
   <div css={aboutStyle}>
     <div css={aboutContentStyle}>
-      <ScrollAnimation css={vertFlex} animateIn='fadeInRight' delay={250} duration={1} animateOnce={true}>
+      <ScrollAnimation css={vertFlex} animateIn='fadeInUp' delay={500} duration={1} animateOnce={true}>
         <h1>Story</h1>
         <p style={{textAlign: 'center', padding: '0px 20px'}}>I'm passionate about creating clean, responsive web experiences. A graduate of Epicodus in Portland, Oregon, I love learning and working with new frameworks and tools, and sharpening my UX chops.</p>
       </ScrollAnimation>
     </div>
     <div css={aboutContentStyle}>
-      <h1>Skills</h1>
-      <ScrollAnimation css={vertFlex} animateIn='fadeInRight' delay={500} duration={1} animateOnce={true}>
+      <ScrollAnimation css={vertFlex} animateIn='fadeInUp' delay={750} duration={1} animateOnce={true}>
+        <h1>Skills</h1>
         <ProgressBar skill='CSS' percentage='80' />
         <ProgressBar skill='HTML' percentage='90' />
         <ProgressBar skill='React' percentage='70' />

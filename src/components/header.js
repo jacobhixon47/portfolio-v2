@@ -3,13 +3,7 @@
 import React from 'react';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { FaArrowDown } from 'react-icons/fa';
-<<<<<<< HEAD
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
-// import img from '../images/jellyfish.png';
-=======
 import img from '../images/ocean.png';
->>>>>>> about-page
 import { jsx, css, keyframes } from '@emotion/core';
 import { myFadeInLeft, myFadeIn, myBounce } from '../utils/animations';
 
@@ -19,9 +13,10 @@ const headerStyle = css`
   height: calc(100vh - 60px);
   left: 60px;
   position: relative;
+  background-image: url(${img});
+  background-size: cover;
+  background-position: right;
   margin: 0;
-<<<<<<< HEAD
-=======
   transition: all 1s;
   animation: ${myFadeIn} 1s .5s both;
   @media (max-width: 425px) {
@@ -29,16 +24,13 @@ const headerStyle = css`
     width: 100vw;
     left: 0px;
   }
->>>>>>> about-page
 `;
 
 const headerOverlayStyle = css`
-  position: absolute;
   width: calc(100vw - 120px);
   max-width: calc(100vw - 120px);
   height: calc(100vh - 60px);
-  left: 0px;
-  top: 0px;
+  left: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,7 +85,6 @@ const scrollMsgStyle = css`
 
 const Header = (props) => (
   <div css={headerStyle}>
-    <Img fluid={props.headerImage.childImageSharp.fluid} />
     <div css={headerOverlayStyle}>
       <div css={headerContentStyle}>
         <h4 css={headerTitleStyle}>Hello, I'm Jacob.</h4>
