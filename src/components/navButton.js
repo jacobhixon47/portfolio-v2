@@ -20,14 +20,16 @@ const buttonStyle = css`
   & svg {
     color: #555;
   }
-  &:hover {
-    cursor: pointer;
-    background-color: #ccc;
-    transition: all .75s;
-  }
-  &:hover svg {
-    transition: all .75s;
-    color: #111;
+  @media (min-width: 1000px) {
+    &:hover {
+      cursor: pointer;
+      background-color: #ccc;
+      transition: all .75s;
+    }
+    &:hover svg {
+      transition: all .75s;
+      color: #111;
+    }
   }
 `;
 

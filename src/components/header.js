@@ -3,9 +3,13 @@
 import React from 'react';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { FaArrowDown } from 'react-icons/fa';
+<<<<<<< HEAD
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 // import img from '../images/jellyfish.png';
+=======
+import img from '../images/ocean.png';
+>>>>>>> about-page
 import { jsx, css, keyframes } from '@emotion/core';
 import { myFadeInLeft, myFadeIn, myBounce } from '../utils/animations';
 
@@ -16,6 +20,16 @@ const headerStyle = css`
   left: 60px;
   position: relative;
   margin: 0;
+<<<<<<< HEAD
+=======
+  transition: all 1s;
+  animation: ${myFadeIn} 1s .5s both;
+  @media (max-width: 425px) {
+    max-width: 100vw;
+    width: 100vw;
+    left: 0px;
+  }
+>>>>>>> about-page
 `;
 
 const headerOverlayStyle = css`
@@ -30,6 +44,11 @@ const headerOverlayStyle = css`
   justify-content: center;
   align-items: center;
   background: linear-gradient(120deg, rgba(50, 50, 50, 1) 5%, rgba(50, 50, 50, 0.2) 90%);
+  @media (max-width: 425px) {
+    max-width: 100vw;
+    width: 100vw;
+    left: 0px;
+  }
 `;
 
 const headerContentStyle = css`
@@ -40,16 +59,18 @@ const headerContentStyle = css`
   align-items: center;
   animation: ${myFadeInLeft} 1s 1.5s both;
   flex-grow: 4;
+  @media (max-width: 425px) {
+    h4 {
+      font-size: 2em;
+    }
+  }
 `;
 
 const headerTitleStyle = css`
   color: #ddd;
-  width: 30vw;
   padding: 10px 20px 10px 20px;
   white-space: nowrap;
-  background-color: rgba(150, 150, 150, 0.4);
   text-align: center;
-  font-family: 'Pacifico', cursive;
   font-size: 100px;
 `;
 
@@ -75,7 +96,7 @@ const Header = (props) => (
     <Img fluid={props.headerImage.childImageSharp.fluid} />
     <div css={headerOverlayStyle}>
       <div css={headerContentStyle}>
-        <h4 css={headerTitleStyle}>hello.</h4>
+        <h4 css={headerTitleStyle}>Hello, I'm Jacob.</h4>
       </div>
       <div css={scrollMsgStyle} onClick={props.handleClickHeaderScrollButton}>
         <h3>scroll</h3>
