@@ -23,7 +23,7 @@ const aboutStyle = css`
     justify-content: flex-start;
     align-items: center;
     width: 100vw;
-    height: auto;
+    height: 100vw;
     left: 0px;
     padding-top: 20px;
   }
