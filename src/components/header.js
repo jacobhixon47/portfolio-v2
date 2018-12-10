@@ -82,6 +82,12 @@ const scrollMsgStyle = css`
     animation: ${myBounce} 2s infinite;
   }
   @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+`;
+
+const scrollMsgContent = css`
+  @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -93,7 +99,7 @@ const Header = (props) => (
         <h4 css={headerTitleStyle}>Hello, I'm Jacob.</h4>
       </div>
       <div css={scrollMsgStyle} onClick={props.handleClickHeaderScrollButton}>
-        <h3>scroll</h3>
+        <h3 css={scrollMsgContent}>scroll</h3>
         <FaArrowDown />
       </div>
     </div>
