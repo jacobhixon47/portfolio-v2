@@ -10,82 +10,71 @@ import { jsx, css } from '@emotion/core';
 const aboutStyle = css`
   position: relative;
   width: calc(100vw - 120px);
-  height: 150vh;
+  height: calc(100vh - 60px);
   left: 60px;
   background-color: #ddd;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  @media (max-width: 425px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: calc(200vh - 60px);
+    left: 0px;
+    padding-top: 20px;
+  }
 `;
 
-const aboutHeadingStyle = css`
-  height: 30%;
-`;
-
-const aboutTitleStyle = css`
-  color: #111;
-  margin: 0;
-`;
-
-const aboutBodyStyle = css`
+const aboutContentStyle = css`
   position: relative;
   width: calc(100vw - 120px);
-  height: 70%;
+  height: 100%;
   background-color: #ddd;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  @media (max-width: 425px) {
+    width: 100vw;
+      justify-content: center;
+  }
 `;
-//
-// const aboutBodyInfoStyle = css`
-//   height: 100%;
-//   flex-grow: 1;
-//   background-color: red;
-// `;
-//
-// const aboutBodySkillsStyle = css`
-//   height: 100%;
-//   flex-grow: 1;
-//   background-color: lightblue;
-//   display: flex;
-//   flex-wrap: wrap;
-// `;
-//
-// const skillStyle = css`
-//   flex-grow: 1;
-//   border: 1px solid black;
-//   height: 50%;
-//   width: 25%;
-// `;
+
+const vertFlex = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;
+
 
 const About = props => (
-  <Grid css={aboutStyle}>
-    <Row style={{height: '30%'}} center={['lg']} middle={['lg']}>
-    </Row>
-    <Row css={aboutBodyStyle}>
-      <Col lg={6} />
-      <Col lg={6}>
-        <Row top={['lg', 'md', 'sm']} middle={['lg', 'md', 'sm']}>
-          <ProgressBar skill='CSS' percentage='80' />
-          <ProgressBar skill='HTML' percentage='90' />
-          <ProgressBar skill='Javascript' percentage='80' />
-          <ProgressBar skill='React' percentage='70' />
-          <ProgressBar skill='NodeJS' percentage='70' />
-          <ProgressBar skill='AngularJS/2/4' percentage='70' />
-          <ProgressBar skill='AngularJS/2/4' percentage='70' />
-          <ProgressBar skill='AngularJS/2/4' percentage='70' />
-          <ProgressBar skill='AngularJS/2/4' percentage='70' />
-        </Row>
-      </Col>
-    </Row>
-  </Grid>
+  <div css={aboutStyle}>
+    <div css={aboutContentStyle}>
+      <ScrollAnimation css={vertFlex} animateIn='fadeInRight' delay={250} duration={1} animateOnce={true}>
+        <h1>Story</h1>
+        <p style={{textAlign: 'center', padding: '0px 20px'}}>I'm passionate about creating clean, responsive web experiences. A graduate of Epicodus in Portland, Oregon, I love learning and working with new frameworks and tools, and sharpening my UX chops.</p>
+      </ScrollAnimation>
+    </div>
+    <div css={aboutContentStyle}>
+      <h1>Skills</h1>
+      <ScrollAnimation css={vertFlex} animateIn='fadeInRight' delay={500} duration={1} animateOnce={true}>
+        <ProgressBar skill='CSS' percentage='80' />
+        <ProgressBar skill='HTML' percentage='90' />
+        <ProgressBar skill='React' percentage='70' />
+        <ProgressBar skill='Javascript' percentage='80' />
+        <ProgressBar skill='NodeJS' percentage='70' />
+        <ProgressBar skill='Angular' percentage='60' />
+        <ProgressBar skill='UI/UX' percentage='50' />
+      </ScrollAnimation>
+    </div>
+  </div>
 );
-// <div css={aboutBodyInfoStyle}/>
-// <div css={aboutBodySkillsStyle}>
-//   <div css={skillStyle}/>
-//   <div css={skillStyle}/>
-//   <div css={skillStyle}/>
-//   <div css={skillStyle}/>
-//   <div css={skillStyle}/>
-//   <div css={skillStyle}/>
-//   <div css={skillStyle}/>
-//   <div css={skillStyle}/>
-// </div>
 
 export default About;

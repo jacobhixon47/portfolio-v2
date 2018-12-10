@@ -40,6 +40,9 @@ const navListStyle = css`
   width: 80vw;
   display: flex;
   justify-content: flex-end;
+  @media (max-width: 425px) {
+    justify-content: center;
+  }
   align-items: center;
 `;
 
@@ -47,6 +50,7 @@ const navItemsShowStyle = css`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  width: 100%;
   & div:nth-of-type(1) {
     animation: ${myFadeIn} .5s .4s both;
   }
@@ -56,12 +60,16 @@ const navItemsShowStyle = css`
   & div:nth-of-type(3) {
     animation: ${myFadeIn} .5s both;
   }
+  @media (max-width: 425px) {
+    justify-content: space-around;
+  }
 `;
 
 const navItemsHideStyle = css`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  width: 100%;
   & div:nth-of-type(1) {
     animation: ${myFadeOut} .5s .4s both;
   }
@@ -70,6 +78,9 @@ const navItemsHideStyle = css`
   }
   & div:nth-of-type(3) {
     animation: ${myFadeOut} .5s both;
+  }
+  @media (max-width: 425px) {
+    justify-content: space-around;
   }
 `;
 
@@ -84,10 +95,12 @@ const navItemStyle = css`
   & h4 {
     margin: 0;
   }
-  &:hover {
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0.1);
-    transition: all .5s;
+  @media (min-width: 1000px) {
+    &:hover {
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.1);
+      transition: all .5s;
+    }
   }
 `;
 
@@ -105,10 +118,10 @@ const Nav = (props) => {
           <div css={navItemStyle}><h4>Projects</h4></div>
           <div css={navItemStyle}><h4>Contact</h4></div>
         </div>
-        <NavButton handleMouseDown={props.handleMouseDown}>
-          <MdMenu css={iconStyle}/>
-        </NavButton>
       </div>
+      <NavButton handleMouseDown={props.handleMouseDown}>
+        <MdMenu css={iconStyle}/>
+      </NavButton>
     </div>
   );
 }

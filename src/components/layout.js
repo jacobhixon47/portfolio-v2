@@ -14,6 +14,9 @@ const leftSidebarStyle = css`
   width: 60px;
   background-color: #ddd;
   z-index: 99;
+  @media (max-width: 425px) {
+    display: none;
+  }
 `;
 
 const rightSidebarStyle = css`
@@ -29,12 +32,19 @@ const rightSidebarStyle = css`
   justify-content: center;
   background-color: #ddd;
   z-index: 99;
+  @media (max-width: 425px) {
+    display: none;
+  }
 `;
 
 const mainContentStyle = css`
   max-width: calc(100vw - 120px);
   max-height: calc(100vh - 60px);
   margin-top: 60px;
+  @media (max-width: 425px) {
+    width: 100vw;
+    max-width: 100vw;
+  }
 `;
 
 class Layout extends Component {

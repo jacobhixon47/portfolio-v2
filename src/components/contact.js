@@ -26,6 +26,9 @@ const contactSectionStyle = css`
   div:nth-of-type(3) {
     animation: ${myFadeInUp} 1s 2s both;
   }
+  @media (max-width: 425px) {
+    display: none;
+  }
 `;
 
 const contactPanelStyle = css`

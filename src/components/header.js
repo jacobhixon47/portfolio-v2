@@ -19,6 +19,11 @@ const headerStyle = css`
   margin: 0;
   transition: all 1s;
   animation: ${myFadeIn} 1s .5s both;
+  @media (max-width: 425px) {
+    max-width: 100vw;
+    width: 100vw;
+    left: 0px;
+  }
 `;
 
 const headerOverlayStyle = css`
@@ -31,6 +36,11 @@ const headerOverlayStyle = css`
   justify-content: center;
   align-items: center;
   background: linear-gradient(120deg, rgba(50, 50, 50, 1) 5%, rgba(50, 50, 50, 0.2) 90%);
+  @media (max-width: 425px) {
+    max-width: 100vw;
+    width: 100vw;
+    left: 0px;
+  }
 `;
 
 const headerContentStyle = css`
@@ -41,6 +51,11 @@ const headerContentStyle = css`
   align-items: center;
   animation: ${myFadeInLeft} 1s 1.5s both;
   flex-grow: 4;
+  @media (max-width: 425px) {
+    h4 {
+      font-size: 2em;
+    }
+  }
 `;
 
 const headerTitleStyle = css`
