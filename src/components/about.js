@@ -60,7 +60,7 @@ const About = props => (
     <div css={aboutContentStyle}>
       <ScrollAnimation css={vertFlex} animateIn='fadeInUp' duration={1} animateOnce={true}>
         <h1>Story</h1>
-        <p style={{textAlign: 'center', padding: '0px 20px'}}>I'm passionate about creating clean, responsive web experiences. A graduate of Epicodus in Portland, Oregon, I love learning and working with new frameworks and tools, and sharpening my UX chops.</p>
+        <p style={{textAlign: 'center', padding: '0px 20px'}}>I'm passionate about creating clean, responsive web experiences. I love working with new tools, and sharpening my UX chops.</p>
       </ScrollAnimation>
     </div>
     <div css={aboutContentStyle}>
