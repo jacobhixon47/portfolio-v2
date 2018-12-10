@@ -14,7 +14,7 @@ const progressBarOuter = css`
   padding: 0px 5px 0px 0px;
   box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
   margin-bottom: 10px;
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     width: 90%;
   }
 `;

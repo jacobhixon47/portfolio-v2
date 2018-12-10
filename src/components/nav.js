@@ -40,7 +40,7 @@ const navListStyle = css`
   width: 80vw;
   display: flex;
   justify-content: flex-end;
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     justify-content: center;
   }
   align-items: center;
@@ -60,7 +60,7 @@ const navItemsShowStyle = css`
   & div:nth-of-type(3) {
     animation: ${myFadeIn} .5s both;
   }
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     justify-content: space-around;
   }
 `;
@@ -79,7 +79,7 @@ const navItemsHideStyle = css`
   & div:nth-of-type(3) {
     animation: ${myFadeOut} .5s both;
   }
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     justify-content: space-around;
   }
 `;

@@ -18,7 +18,7 @@ const aboutStyle = css`
   justify-content: center;
   align-items: center;
   padding-top: 30px;
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -39,7 +39,7 @@ const aboutContentStyle = css`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     width: 100vw;
       justify-content: flex-start;
       height: auto;
