@@ -20,10 +20,10 @@ const aboutStyle = css`
   padding-top: 30px;
   @media (max-width: 425px) {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100vw;
-    height: calc(200vh - 60px);
+    height: auto;
     left: 0px;
     padding-top: 20px;
   }
@@ -41,14 +41,15 @@ const aboutContentStyle = css`
   align-items: center;
   @media (max-width: 425px) {
     width: 100vw;
-      justify-content: center;
+      justify-content: flex-start;
+      height: auto;
   }
 `;
 
 const vertFlex = css`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
 `;
@@ -57,13 +58,13 @@ const vertFlex = css`
 const About = props => (
   <div css={aboutStyle}>
     <div css={aboutContentStyle}>
-      <ScrollAnimation css={vertFlex} animateIn='fadeInUp' delay={500} duration={1} animateOnce={true}>
+      <ScrollAnimation css={vertFlex} animateIn='fadeInUp' duration={1} animateOnce={true}>
         <h1>Story</h1>
         <p style={{textAlign: 'center', padding: '0px 20px'}}>I'm passionate about creating clean, responsive web experiences. A graduate of Epicodus in Portland, Oregon, I love learning and working with new frameworks and tools, and sharpening my UX chops.</p>
       </ScrollAnimation>
     </div>
     <div css={aboutContentStyle}>
-      <ScrollAnimation css={vertFlex} animateIn='fadeInUp' delay={750} duration={1} animateOnce={true}>
+      <ScrollAnimation css={vertFlex} animateIn='fadeInUp' duration={1} animateOnce={true}>
         <h1>Skills</h1>
         <ProgressBar skill='CSS' percentage='80' />
         <ProgressBar skill='HTML' percentage='90' />

@@ -81,6 +81,9 @@ const scrollMsgStyle = css`
     cursor: pointer;
     animation: ${myBounce} 2s infinite;
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Header = (props) => (
