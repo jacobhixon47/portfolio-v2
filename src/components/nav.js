@@ -37,7 +37,7 @@ const navTitleStyle = css`
 `;
 
 const navListStyle = css`
-  width: 80vw;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   @media (max-width: 768px) {
