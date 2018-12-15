@@ -50,11 +50,9 @@ const headerContentStyle = css`
   justify-content: center;
   align-items: center;
   animation: ${myFadeInLeft} 1s 1.5s both;
-  flex-grow: 4;
-  @media (max-width: 768px) {
-    h4 {
-      font-size: 2em;
-    }
+  flex-grow: 2;
+  @media (min-width: 1000px) {
+    flex-grow: 4;
   }
 `;
 
@@ -64,6 +62,9 @@ const headerTitleStyle = css`
   white-space: nowrap;
   text-align: center;
   font-size: 100px;
+  @media (max-width: 768px) {
+    font-size: 2em;
+  }
 `;
 
 const scrollMsgStyle = css`
@@ -77,9 +78,11 @@ const scrollMsgStyle = css`
     color: #ddd;
     margin: 0;
   }
-  & h3:hover {
-    cursor: pointer;
-    animation: ${myBounce} 2s infinite;
+  @media (min-width: 1000px) {
+    & h3:hover {
+      cursor: pointer;
+      animation: ${myBounce} 2s infinite;
+    }
   }
   @media (max-width: 768px) {
     justify-content: flex-start;

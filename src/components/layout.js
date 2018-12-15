@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import Nav from './nav';
-import Contact from './contact';
+import ContactSidebar from './contactSidebar';
 import {jsx, css} from '@emotion/core';
 
 const leftSidebarStyle = css`
@@ -58,6 +58,7 @@ class Layout extends Component {
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
+    this.handleClickNavItem = this.handleClickNavItem.bind(this);
   }
 
   componentDidMount() {
@@ -75,6 +76,30 @@ class Layout extends Component {
     this.setState({ navVisible: !this.state.navVisible });
   };
 
+  handleClickNavItem(item) {
+    if (this.state.navVisible) {
+      if (item === 'about') {
+        window.scrollTo({
+          top: (document.getElementById('about').offsetTop - 60),
+          left: 0,
+          behavior: 'smooth'
+        });
+      } else if (item === 'projects') {
+        window.scrollTo({
+          top: (document.getElementById('projects').offsetTop - 60),
+          left: 0,
+          behavior: 'smooth'
+        });
+      } else if (item === 'contact') {
+        window.scrollTo({
+          top: ((window.innerHeight * 3) - 60),
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
+    }
+  }
+
   render() {
     return (
       <div id='layout'>
@@ -89,8 +114,10 @@ class Layout extends Component {
           />
           <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet" />
         </Helmet>
-        <Nav handleMouseDown={this.handleMouseDown} navVisible={this.state.navVisible} />
-        <Contact />
+        <Nav handleClickNavItem={this.handleClickNavItem}
+              handleMouseDown={this.handleMouseDown}
+              navVisible={this.state.navVisible} />
+        <ContactSidebar />
         <div css={leftSidebarStyle} />
         <div css={rightSidebarStyle} />
         <div css={mainContentStyle}>

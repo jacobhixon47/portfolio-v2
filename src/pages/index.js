@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../components/header';
 import Layout from '../components/layout';
 import About from '../components/about';
+import Projects from '../components/projects';
 import './index.css';
 
 class IndexPage extends Component {
@@ -34,6 +35,7 @@ class IndexPage extends Component {
                   handleClickHeaderScrollButton={this.handleClickHeaderScrollButton}
                   headerImage={this.props.data.headerImage}/>
           <About />
+          <Projects />
       </Layout>
     );
   }

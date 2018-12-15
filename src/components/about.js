@@ -3,7 +3,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import ScrollAnimation from 'react-animate-on-scroll';
-import { Grid, Row, Col } from 'react-material-responsive-grid';
 import ProgressBar from './progressBar';
 import { jsx, css } from '@emotion/core';
 
@@ -23,7 +22,7 @@ const aboutStyle = css`
     justify-content: flex-start;
     align-items: center;
     width: 100vw;
-    height: 100vw;
+    height: auto;
     left: 0px;
     padding-top: 20px;
   }
@@ -56,7 +55,7 @@ const vertFlex = css`
 
 
 const About = props => (
-  <div css={aboutStyle}>
+  <div css={aboutStyle} id='about'>
     <div css={aboutContentStyle}>
       <ScrollAnimation css={vertFlex} animateIn='fadeInUp' duration={1} animateOnce={true}>
         <h1>Story</h1>

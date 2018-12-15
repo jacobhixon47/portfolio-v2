@@ -52,7 +52,7 @@ const contactPanelStyle = css`
   }
 `;
 
-const Contact = (props) => (
+const ContactSidebar = (props) => (
   <div css={contactSectionStyle}>
     <div css={contactPanelStyle}>
       <h3><MdMailOutline/></h3>
@@ -66,4 +66,4 @@ const Contact = (props) => (
   </div>
 )
 
-export default Contact;
+export default ContactSidebar;

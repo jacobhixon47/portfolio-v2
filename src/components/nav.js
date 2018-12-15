@@ -12,7 +12,7 @@ const navStyle = css`
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #ddd;
   position: fixed;
   top: calc(100% - 75px);
@@ -23,7 +23,7 @@ const navStyle = css`
 `;
 
 const navTitleStyle = css`
-  width: 60px;
+  width: 60px !important;
   height: 60px;
   display: flex;
   justify-content: center;
@@ -37,7 +37,7 @@ const navTitleStyle = css`
 `;
 
 const navListStyle = css`
-  width: 100%;
+  width: calc(100% - 120px);
   display: flex;
   justify-content: flex-end;
   @media (max-width: 768px) {
@@ -114,12 +114,18 @@ const Nav = (props) => {
       <div css={navTitleStyle}><h3>JH</h3></div>
       <div css={navListStyle}>
         <div css={props.navVisible ? navItemsShowStyle : navItemsHideStyle}>
-          <div css={navItemStyle}><h4>About</h4></div>
-          <div css={navItemStyle}><h4>Projects</h4></div>
+          <div css={navItemStyle}
+               onClick={() => {props.handleClickNavItem('about')}}>
+                  <h4>About</h4>
+          </div>
+          <div css={navItemStyle}
+               onClick={() => {props.handleClickNavItem('projects')}}>
+                  <h4>Projects</h4>
+          </div>
           <div css={navItemStyle}><h4>Contact</h4></div>
         </div>
       </div>
-      <NavButton handleMouseDown={props.handleMouseDown}>
+      <NavButton style={{width: '60px'}} handleMouseDown={props.handleMouseDown}>
         <MdMenu css={iconStyle}/>
       </NavButton>
     </div>
