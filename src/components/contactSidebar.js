@@ -55,10 +55,10 @@ const contactPanelStyle = css`
 const ContactSidebar = (props) => (
   <div css={contactSectionStyle}>
     <div css={contactPanelStyle}>
-      <h3><a href='https://github.com/jacobhixon47' target='_blank'><FaGithub/></a></h3>
+      <h3><a href='https://github.com/jacobhixon47' target='_blank' rel='noopener'><FaGithub/></a></h3>
     </div>
     <div css={contactPanelStyle}>
-      <h3><a href='https://linkedin.com/in/jacobhixon/' target='_blank'><FaLinkedin/></a></h3>
+      <h3><a href='https://linkedin.com/in/jacobhixon/' target='_blank' rel='noopener'><FaLinkedin/></a></h3>
     </div>
   </div>
 )

@@ -60,8 +60,8 @@ const Footer = props => (
     <div css={mainFooterContentStyle}>
       <div css={footerColumnStyle}>
         <h3 style={{color: '#4C92B4'}}>Social</h3>
-        <a href='https://github.com/jacobhixon47' target='_blank'><p>Github</p></a>
-        <a href='https://linkedin.com/in/jacobhixon/' target='_blank'><p>LinkedIn</p></a>
+        <a href='https://github.com/jacobhixon47' target='_blank' rel='noopener'><p>Github</p></a>
+        <a href='https://linkedin.com/in/jacobhixon/' target='_blank' rel='noopener'><p>LinkedIn</p></a>
       </div>
       <div css={footerColumnStyle} style={{justifyContent: 'space-around'}}>
         <h3 style={{color: '#4C92B4'}}>Contact</h3>
@@ -69,7 +69,7 @@ const Footer = props => (
         <p>jacobhixon47@gmail.com</p>
       </div>
     </div>
-    <a href='https://github.com/jacobhixon47/portfolio-v2' target='_blank'><p style={{color: '#4C92B4'}}>{'View this site on Github'}</p></a>
+    <a href='https://github.com/jacobhixon47/portfolio-v2' target='_blank' rel='noopener'><p style={{color: '#4C92B4'}}>{'View this site on Github'}</p></a>
   </div>
 );
 
