@@ -27,6 +27,7 @@ const projectsStyle = css`
     width: 100vw;
     left: 0px;
     padding-top: 20px;
+    margin-bottom: 50vh;
   }
 `;
 
