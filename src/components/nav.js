@@ -34,6 +34,9 @@ const navTitleStyle = css`
     margin: 0;
   }
   animation: ${mySlideInDown} .5s 1s both;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const navListStyle = css`
@@ -111,7 +114,7 @@ const iconStyle = css`
 const Nav = (props) => {
   return (
     <div css={navStyle}>
-      <div css={navTitleStyle}><h3>JH</h3></div>
+      <div css={navTitleStyle} onClick={() => {props.handleClickNavItem('home')}}><h3>JH</h3></div>
       <div css={navListStyle}>
         <div css={props.navVisible ? navItemsShowStyle : navItemsHideStyle}>
           <div css={navItemStyle}
@@ -122,7 +125,10 @@ const Nav = (props) => {
                onClick={() => {props.handleClickNavItem('projects')}}>
                   <h4>Projects</h4>
           </div>
-          <div css={navItemStyle}><h4>Contact</h4></div>
+          <div css={navItemStyle}
+               onClick={() => {props.handleClickNavItem('contact')}}>
+                  <h4>Contact</h4>
+          </div>
         </div>
       </div>
       <NavButton style={{width: '60px'}} handleMouseDown={props.handleMouseDown}>

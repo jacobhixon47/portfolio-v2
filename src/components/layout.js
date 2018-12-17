@@ -78,6 +78,13 @@ class Layout extends Component {
   };
 
   handleClickNavItem(item) {
+    if (item === 'home') {
+      window.scrollTo({
+        top: .01,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
     if (this.state.navVisible) {
       if (item === 'about') {
         window.scrollTo({
@@ -93,7 +100,7 @@ class Layout extends Component {
         });
       } else if (item === 'contact') {
         window.scrollTo({
-          top: ((window.innerHeight * 3) - 60),
+          top: (document.getElementById('projects').offsetTop + window.innerHeight),
           left: 0,
           behavior: 'smooth'
         });
