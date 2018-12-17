@@ -5,11 +5,12 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { jsx, css } from '@emotion/core';
 
 const footerStyle = css`
-  height: 30vh;
+  overflow: auto;
+  height: 150px;
   width: 100vw;
   z-index: -100;
   position: fixed;
-  top: 70vh;
+  top: calc(100vh - 150px);
   background-color: #00283B;
   display: flex;
   justify-content: center;

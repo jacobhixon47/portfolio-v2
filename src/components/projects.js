@@ -16,8 +16,9 @@ const projectsStyle = css`
   justify-content: center;
   align-items: center;
   padding-top: 30px;
-  margin-bottom: 30vh;
+  margin-bottom: 150px;
   color: #ddd;
+  overflow: auto;
   & h1 {
     color: #ddd;
   }
@@ -27,7 +28,6 @@ const projectsStyle = css`
     width: 100vw;
     left: 0px;
     padding-top: 20px;
-    margin-bottom: 50vh;
   }
 `;
 
