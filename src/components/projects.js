@@ -9,13 +9,18 @@ const projectsStyle = css`
   width: calc(100vw - 120px);
   height: calc(100vh - 60px);
   left: 60px;
-  background-color: #ddd;
+  background-color: #111;
   margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 30px;
+  margin-bottom: 30vh;
+  color: #ddd;
+  & h1 {
+    color: #ddd;
+  }
   @media (max-width: 768px) {
     justify-content: center;
     align-items: center;

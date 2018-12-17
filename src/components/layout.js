@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import Nav from './nav';
 import ContactSidebar from './contactSidebar';
+import Footer from './footer';
 import {jsx, css} from '@emotion/core';
 
 const leftSidebarStyle = css`
@@ -123,6 +124,7 @@ class Layout extends Component {
         <div css={mainContentStyle}>
           {this.props.children}
         </div>
+        <Footer />
       </div>
     );
   }

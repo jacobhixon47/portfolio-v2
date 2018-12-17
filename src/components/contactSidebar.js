@@ -55,9 +55,6 @@ const contactPanelStyle = css`
 const ContactSidebar = (props) => (
   <div css={contactSectionStyle}>
     <div css={contactPanelStyle}>
-      <h3><MdMailOutline/></h3>
-    </div>
-    <div css={contactPanelStyle}>
       <h3><a href='https://github.com/jacobhixon47' target='_blank'><FaGithub/></a></h3>
     </div>
     <div css={contactPanelStyle}>
