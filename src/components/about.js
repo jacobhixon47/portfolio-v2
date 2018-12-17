@@ -23,6 +23,7 @@ const aboutStyle = css`
     align-items: center;
     width: 100vw;
     height: auto;
+    min-height: calc(100vh - 60px);
     left: 0px;
     padding-top: 20px;
   }
