@@ -17,7 +17,7 @@ const projectsStyle = css`
   align-items: center;
   padding-top: 30px;
   @media (max-width: 768px) {
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 100vw;
     left: 0px;
