@@ -3,6 +3,7 @@ import Header from '../components/header';
 import Layout from '../components/layout';
 import About from '../components/about';
 import Projects from '../components/projects';
+import Footer from '../components/footer';
 import './index.css';
 
 class IndexPage extends Component {
@@ -36,6 +37,7 @@ class IndexPage extends Component {
                   headerImage={this.props.data.headerImage}/>
           <About />
           <Projects />
+          <Footer />
       </Layout>
     );
   }
