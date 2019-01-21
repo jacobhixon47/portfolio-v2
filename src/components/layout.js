@@ -120,6 +120,7 @@ class Layout extends Component {
             href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'
           />
           <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet" />
+          <style>{'body {background-color: #ddd}'}</style>
         </Helmet>
         <Nav handleClickNavItem={this.handleClickNavItem}
               handleMouseDown={this.handleMouseDown}

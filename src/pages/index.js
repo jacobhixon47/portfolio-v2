@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import About from '../components/about';
 import Projects from '../components/projects';
 import Footer from '../components/footer';
+import { graphql } from 'gatsby';
 import './index.css';
 
 class IndexPage extends Component {

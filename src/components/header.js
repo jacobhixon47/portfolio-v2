@@ -17,12 +17,14 @@ const headerStyle = css`
   background-size: cover;
   background-position: right;
   margin: 0;
+  margin-bottom: 20px;
   transition: all 1s;
   animation: ${myFadeIn} 1s .5s both;
   @media (max-width: 760px) {
     max-width: 100vw;
-    width: 100vw;
-    left: 0px;
+    width: calc(100vw - 40px);
+    left: 0;
+    margin: 80px 20px 0 20px;
   }
 `;
 
@@ -38,8 +40,8 @@ const headerOverlayStyle = css`
   background: linear-gradient(120deg, rgba(50, 50, 50, 1) 5%, rgba(50, 50, 50, 0.2) 90%);
   @media (max-width: 768px) {
     max-width: 100vw;
-    width: 100vw;
-    left: 0px;
+    width: calc(100vw - 40px);
+    left: 0;
   }
 `;
 

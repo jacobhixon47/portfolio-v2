@@ -2,20 +2,22 @@
 
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { myFadeIn } from '../utils/animations';
 import { jsx, css } from '@emotion/core';
 
 const footerStyle = css`
   height: 30vh;
   width: 100vw;
-  top: 70vh;
-  background-color: #00283B;
+  background-color: #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 0px 10%;
+  animation: ${myFadeIn} 1s 1.5s both;
+  border-bottom: 20px solid #ddd;
   & a p, & p {
-    color: #ddd;
+    color: #111;
     margin: 0;
   }
   & a p:hover {
@@ -23,12 +25,14 @@ const footerStyle = css`
     cursor: pointer;
   }
   @media (min-width: 1000px) {
-    position: fixed;
-    z-index: -100;
+    & h3 {
+      margin-bottom: 10px;
+    }
   }
-  & h3 {
-    color: #4C92B4;
-    margin-bottom: 10px;
+  @media (max-width: 768px) {
+    width: calc(100vw - 40px);
+    left: 0;
+    margin: 0px 20px 0px 20px;
   }
 `;
 

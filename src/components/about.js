@@ -11,7 +11,7 @@ const aboutStyle = css`
   width: calc(100vw - 120px);
   height: calc(100vh - 60px);
   left: 60px;
-  background-color: #ddd;
+  background-color: #bbb;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -21,28 +21,31 @@ const aboutStyle = css`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 100vw;
+    width: calc(100vw - 40px);
+    left: 0;
     height: auto;
     min-height: calc(100vh - 60px);
-    left: 0px;
-    padding-top: 20px;
+    margin: 20px 20px 0px 20px;
+    padding-top: 0px;
   }
 `;
 
 const aboutContentStyle = css`
+  padding: 20px 0px 20px 0px;
   position: relative;
   width: calc(100vw - 120px);
   height: 100%;
-  background-color: #ddd;
+  background-color: #bbb;
   margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   @media (max-width: 768px) {
-    width: 100vw;
-      justify-content: flex-start;
-      height: auto;
+    width: calc(100vw - 40px);
+    justify-content: flex-start;
+    height: auto;
+    border-bottom: 20px solid #ddd;
   }
 `;
 
@@ -61,6 +64,7 @@ const About = props => (
       <ScrollAnimation css={vertFlex} animateIn='fadeInUp' duration={1} animateOnce={true}>
         <h1>Story</h1>
         <p style={{textAlign: 'center', padding: '0px 20px'}}>I'm passionate about creating clean, responsive web experiences. I love working with new tools, and sharpening my UX chops.</p>
+        <p style={{textAlign: 'center', padding: '0px 20px'}}>In April of 2017, I graduated Epicodus (Portland campus) with a focus on full-stack development using Ruby on Rails and Javascript. These days, I've been putting a lot of focus on rounding out my web development skills and learning to work with new technologies, such as React, GatsbyJS, Wordpress, and more!</p>
       </ScrollAnimation>
     </div>
     <div css={aboutContentStyle}>
@@ -68,11 +72,12 @@ const About = props => (
         <h1>Skills</h1>
         <ProgressBar skill='CSS' percentage='80' />
         <ProgressBar skill='HTML' percentage='90' />
-        <ProgressBar skill='React' percentage='70' />
         <ProgressBar skill='Javascript' percentage='80' />
-        <ProgressBar skill='NodeJS' percentage='70' />
+        <ProgressBar skill='React' percentage='70' />
         <ProgressBar skill='Angular' percentage='60' />
-        <ProgressBar skill='UI/UX' percentage='50' />
+        <ProgressBar skill='NodeJS' percentage='70' />
+        <ProgressBar skill='UI/UX' percentage='60' />
+        <ProgressBar skill='Wordpress' percentage='50' />
       </ScrollAnimation>
     </div>
   </div>
