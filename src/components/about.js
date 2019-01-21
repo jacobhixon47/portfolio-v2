@@ -31,9 +31,9 @@ const aboutStyle = css`
 `;
 
 const aboutContentStyle = css`
-  padding: 20px 0px 0px 0px;
+  padding: 20px 0px 20px 0px;
   position: relative;
-  width: calc(100vw - 120px);
+  width: 100%;
   height: 100%;
   background-color: #bbb;
   margin: 0;
@@ -41,9 +41,8 @@ const aboutContentStyle = css`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 30px;
   @media (max-width: 768px) {
-    width: calc(100vw - 40px);
+    width: 100%;
     justify-content: flex-start;
     height: auto;
     border-bottom: 20px solid #ddd;
@@ -61,7 +60,7 @@ const vertFlex = css`
 
 const About = props => (
   <div css={aboutStyle} id='about'>
-    <div css={aboutContentStyle} style={{borderRight: '10px solid #ddd'}}>
+    <div css={aboutContentStyle}>
       <ScrollAnimation css={vertFlex}
                       animateIn='fadeInUp'
                       duration={1}
@@ -71,7 +70,7 @@ const About = props => (
         <p style={{textAlign: 'center', padding: '0px 20px'}}>In April of 2017, I graduated Epicodus (Portland campus) with a focus on full-stack development using Ruby on Rails and Javascript. These days, I've been putting a lot of focus on rounding out my web development skills and learning to work with new technologies, such as React, GatsbyJS, Wordpress, and more!</p>
       </ScrollAnimation>
     </div>
-    <div css={aboutContentStyle} style={{borderLeft: '10px solid #ddd'}}>
+    <div css={aboutContentStyle}>
       <ScrollAnimation css={vertFlex} animateIn='fadeInUp' duration={1} animateOnce={true}>
         <h1>Skills</h1>
         <ProgressBar skill='CSS' percentage='80' />

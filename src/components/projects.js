@@ -54,6 +54,7 @@ const projectsListStyle = css`
   padding: 20px;
   border-top: 20px solid #ddd;
   @media (max-width: 768px) {
+    padding: 0px;
     width: 100%;
     flex-direction: column;
   }
