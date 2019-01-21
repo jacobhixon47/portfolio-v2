@@ -24,7 +24,7 @@ class IndexPage extends Component {
 
   handleClickHeaderScrollButton() {
     window.scrollTo({
-      top: (document.getElementById('about').offsetTop - 60),
+      top: (document.getElementById('about').offsetTop - 80),
       left: 0,
       behavior: 'smooth'
     });

@@ -87,13 +87,13 @@ class Layout extends Component {
     if (this.state.navVisible) {
       if (item === 'about') {
         window.scrollTo({
-          top: (document.getElementById('about').offsetTop - 60),
+          top: (document.getElementById('about').offsetTop - 80),
           left: 0,
           behavior: 'smooth'
         });
       } else if (item === 'projects') {
         window.scrollTo({
-          top: (document.getElementById('projects').offsetTop - 60),
+          top: (document.getElementById('projects').offsetTop - 80),
           left: 0,
           behavior: 'smooth'
         });

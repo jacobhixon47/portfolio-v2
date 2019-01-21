@@ -19,9 +19,10 @@ const projectsStyle = css`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 20px;
   color: #111;
   overflow: hidden;
+  margin-bottom: 20px;
   @media (max-width: 768px) {
     justify-content: center;
     align-items: center;
@@ -42,17 +43,16 @@ const projectsTitleStyle = css`
   & h1 {
     margin: 0;
   }
-  @media (max-width: 768px) {
-    border-bottom: 20px solid #ddd;
-  }
 `;
 
 const projectsListStyle = css`
-  width: 95%;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  padding: 20px;
+  border-top: 20px solid #ddd;
   @media (max-width: 768px) {
     width: 100%;
     flex-direction: column;
@@ -61,8 +61,8 @@ const projectsListStyle = css`
 
 const projectTileStyle = css`
   flex-basis: 0;
-  flex-grow: 1;
-  height: 95%;
+  flex-grow: .49;
+  height: 100%;
 `;
 
 const Projects = props => (
@@ -80,14 +80,6 @@ const Projects = props => (
                       github='https://github.com/jacobhixon47/nms-name-gen/'/>
       </ScrollAnimation>
       <ScrollAnimation css={projectTileStyle} animateIn='fadeIn' duration={1} animateOnce={true} delay={750}>
-        <ProjectTile image={TeamGoImage}
-                      title='TeamGo'
-                      description='A simple chatroom web app for groups/teams.'
-                      tools='Ruby on Rails'
-                      live='https://teamgo.herokuapp.com'
-                      github='https://github.com/jacobhixon47/teamgo/'/>
-      </ScrollAnimation>
-      <ScrollAnimation css={projectTileStyle} animateIn='fadeIn' duration={1} animateOnce={true} delay={1250}>
         <ProjectTile image={TeamGoImage}
                       title='TeamGo'
                       description='A simple chatroom web app for groups/teams.'

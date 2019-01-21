@@ -23,6 +23,7 @@ const headerStyle = css`
   @media (max-width: 760px) {
     max-width: 100vw;
     width: calc(100vw - 40px);
+    height: 75vh;
     left: 0;
     margin: 80px 20px 0 20px;
   }
@@ -41,6 +42,7 @@ const headerOverlayStyle = css`
   @media (max-width: 768px) {
     max-width: 100vw;
     width: calc(100vw - 40px);
+    height: 75vh;
     left: 0;
   }
 `;

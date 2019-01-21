@@ -18,13 +18,13 @@ const projectTileStyle = css`
   }
   @media (min-width: 1000px) {
     &:hover > .overlay {
-      transform: translateY(0);
+      opacity: 1;
       transition: all .5s;
     }
   }
   @media (max-width: 768px) {
     width: calc(100vw - 40px);
-    height: 100vh;
+    height: 70vh;
     left: 0px;
     margin: 0;
     border-bottom: 20px solid #ddd;
@@ -46,15 +46,12 @@ const overlayStyle = css`
   opacity: 0;
   transition: all .5s;
   padding: 20px;
-  h2, h3 {
+  h2, h3, p {
     color: #ddd;
   }
-  @media (max-width: 768px) {
-    height: 100%;
-    &:hover {
-      opacity: 1;
-      transition: all .5s;
-    }
+  &:hover {
+    opacity: 1;
+    transition: all .5s;
   }
 `;
 
