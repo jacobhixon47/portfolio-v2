@@ -34,6 +34,11 @@ const footerStyle = css`
     left: 0;
     margin: 0px 20px 0px 20px;
   }
+  @media (min-width: 1440px) {
+    justify-content: flex-start;
+    height: auto;
+    padding: 20px 0px 20px 0px;
+  }
 `;
 
 const mainFooterContentStyle = css`

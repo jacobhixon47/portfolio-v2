@@ -11,7 +11,7 @@ const aboutStyle = css`
   width: calc(100vw - 120px);
   height: calc(100vh - 60px);
   left: 60px;
-  background-color: #bbb;
+  background-color: #ddd;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -28,6 +28,11 @@ const aboutStyle = css`
     margin: 20px 20px 0px 20px;
     padding-top: 0px;
   }
+  @media (min-width: 2000px) {
+    height: calc(70vh - 60px);
+    height: 35vh;
+    align-items: flex-start;
+  }
 `;
 
 const aboutContentStyle = css`
@@ -41,11 +46,13 @@ const aboutContentStyle = css`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin: 0;
   @media (max-width: 768px) {
     width: 100%;
     justify-content: flex-start;
     height: auto;
     border-bottom: 20px solid #ddd;
+    margin: 0 !important;
   }
 `;
 
@@ -55,32 +62,38 @@ const vertFlex = css`
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  height: 100%;
+  padding: 0 10% 0 10%;
+  @media (min-height: 2000px) {
+    padding: 0 25% 0 25%;
+  }
 `;
 
 
 const About = props => (
   <div css={aboutStyle} id='about'>
-    <div css={aboutContentStyle}>
+    <div css={aboutContentStyle} style={{marginRight: '10px'}}>
       <ScrollAnimation css={vertFlex}
                       animateIn='fadeInUp'
                       duration={1}
-                      animateOnce={true}>
+                      animateOnce={true}
+                      delay={2000}>
         <h1>Story</h1>
-        <p style={{textAlign: 'center', padding: '0px 20px'}}>I'm passionate about creating clean, responsive web experiences. I love working with new tools, and sharpening my UX chops.</p>
+        <p style={{textAlign: 'center', padding: '0px 20px'}}>I'm passionate about creating clean, responsive web experiences, because creating a proper presence online is essential to almost any brand's success. I love working with new technologies, and sharpening my UX chops.</p>
         <p style={{textAlign: 'center', padding: '0px 20px'}}>In April of 2017, I graduated Epicodus (Portland campus) with a focus on full-stack development using Ruby on Rails and Javascript. These days, I've been putting a lot of focus on rounding out my web development skills and learning to work with new technologies, such as React, GatsbyJS, Wordpress, and more!</p>
       </ScrollAnimation>
     </div>
-    <div css={aboutContentStyle}>
-      <ScrollAnimation css={vertFlex} animateIn='fadeInUp' duration={1} animateOnce={true}>
+    <div css={aboutContentStyle} style={{marginLeft: '10px'}}>
+      <ScrollAnimation css={vertFlex} animateIn='fadeInUp' duration={1} animateOnce={true} delay={2250}>
         <h1>Skills</h1>
-        <ProgressBar skill='CSS' percentage='80' />
-        <ProgressBar skill='HTML' percentage='90' />
-        <ProgressBar skill='Javascript' percentage='80' />
-        <ProgressBar skill='React' percentage='70' />
-        <ProgressBar skill='Angular' percentage='60' />
-        <ProgressBar skill='NodeJS' percentage='70' />
-        <ProgressBar skill='UI/UX' percentage='60' />
-        <ProgressBar skill='Wordpress' percentage='50' />
+          <h3>CSS</h3>
+          <h3>HTML</h3>
+          <h3>Javascript</h3>
+          <h3>React</h3>
+          <h3>Angular 2+</h3>
+          <h3>NodeJS</h3>
+          <h3>UI/UX</h3>
+          <h3>Wordpress</h3>
       </ScrollAnimation>
     </div>
   </div>
