@@ -77,14 +77,14 @@ const About = props => (
                       animateIn='fadeInUp'
                       duration={1}
                       animateOnce={true}
-                      delay={window.innerWidth > 768 ? 1500 : 500}>
+                      delay={1000}>
         <h1>Story</h1>
         <p style={{textAlign: 'center', padding: '0px 20px'}}>I'm passionate about creating clean, responsive web experiences, because creating a proper presence online is essential to almost any brand's success. I love working with new technologies, and sharpening my UX chops.</p>
         <p style={{textAlign: 'center', padding: '0px 20px'}}>In April of 2017, I graduated Epicodus (Portland campus) with a focus on full-stack development using Ruby on Rails and Javascript. These days, I've been putting a lot of focus on rounding out my web development skills and learning to work with new technologies, such as React, GatsbyJS, Wordpress, and more!</p>
       </ScrollAnimation>
     </div>
     <div css={aboutContentStyle} style={{marginLeft: '10px'}}>
-      <ScrollAnimation css={vertFlex} animateIn='fadeInUp' duration={1} animateOnce={true} delay={window.innerWidth > 768 ? 1750 : 500}>
+      <ScrollAnimation css={vertFlex} animateIn='fadeInUp' duration={1} animateOnce={true} delay={1000}>
         <h1>Skills</h1>
           <h3>CSS</h3>
           <h3>HTML</h3>
