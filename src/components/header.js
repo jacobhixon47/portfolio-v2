@@ -115,7 +115,7 @@ const Header = (props) => (
     <div css={headerOverlayStyle}>
       <div css={headerContentStyle}>
         <h4 css={headerTitleStyle}>Hello, I'm Jacob.</h4>
-        <h4 css={subHeaderStyle}>I want to help your online brand to stand out from the rest.</h4>
+        <h4 css={subHeaderStyle}>I want to help your online brand stand out from the rest.</h4>
       </div>
     </div>
   </div>
